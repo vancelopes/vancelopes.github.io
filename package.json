@@ -10,15 +10,17 @@
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
     "react": "^16.11.0",
+    "sass": "^1.23.2",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
   },
   "scripts": {
+    "sass" : "sass --watch src/styles/scss:src/styles/css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "sass src/styles/scss:src/styles/css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
